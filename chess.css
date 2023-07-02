@@ -1,0 +1,50 @@
+#chess-board {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template: repeat(8, 1fr) / repeat(8, 1fr);
+}
+
+.square {
+  display: grid;
+  place-items: center;
+}
+
+.square::after {
+  content: attr(data-piece);
+  font-size: 25px; 
+  line-height: 25px; 
+}
+
+.black::after {
+  color: white; /* pieces on black squares will be white */
+}
+
+.white::after {
+  color: black; /* pieces on white squares will be black */
+}
+
+.white {
+  background-color: rgb(255, 255, 255);
+}
+
+.black {
+  background-color: rgb(135, 126, 126);
+}
+
+.possible-move {
+  background-color: rgb(51, 179, 117);
+}
+
+.active {
+  background-color: rgb(57, 23, 190);
+}
+
+.confirm {
+  background-color: rgb(255, 0, 0);
+}
+
+.grey {
+  background-color: rgb(128, 128, 128); 
+}

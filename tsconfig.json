@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "ES2015",
+        "downlevelIteration": true,
+        "outDir": "./dist",
+        "strict": true,
+        "lib": ["es5", "dom"],
+        "types": ["node"],
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "rootDir": "./src",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src/**/*.ts"]
+}
+
