@@ -55,28 +55,16 @@ function randomPositions(count) {
     return positions;
 }
 //testing whether move works
-/* let num = 10
-let game = new chess_game()
+let num = 10;
+let game = new chess_engine_1.chess_game();
 game.simulation_board.set_empty();
-let king = new Piece('king', 'white', [4,4])
-game.simulation_board.board[4][4] = king
+let king = new chess_engine_1.Piece('king', 'white', [4, 4]);
+game.simulation_board.board[4][4] = king;
 game.simulation_board.print();
 for (let i = 0; i < num; i++) {
-  let moves = game.simulation_board.get_possible_moves(king)
-  let k = getRandomNumberInRange(0, moves.length-1)
-  console.log("considering moves", king, moves[k])
-  game.simulation_board.move(king, moves[k])
-
-  game.simulation_board.print();
-  
-
-} */
-let game = new chess_engine_1.chess_game();
-game.Game_board.set_empty();
-game.Game_board.board[0][0] = new chess_engine_1.Piece('king', 'white', [0, 0]);
-game.Game_board.board[0][1] = new chess_engine_1.Piece('queen', 'black', [0, 1]);
-game.Game_board.board[0][5] = new chess_engine_1.Piece('queen', 'black', [0, 5]);
-console.log('init board --------------------');
-game.Game_board.print();
-console.log(game.Game_board.check_threat("white"));
-console.log("checkmate", game.checkmate("white"));
+    let moves = game.simulation_board.get_possible_moves(king);
+    let k = getRandomNumberInRange(0, moves.length - 1);
+    console.log("considering moves", king, moves[k]);
+    game.simulation_board.move(king, moves[k]);
+    game.simulation_board.print();
+}

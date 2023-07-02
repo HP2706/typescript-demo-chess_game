@@ -73,7 +73,7 @@ function random_board(game: chess_game, one_col: boolean = false) {
 
 //testing whether move works
 
-/* let num = 10
+let num = 10
 let game = new chess_game()
 game.simulation_board.set_empty();
 let king = new Piece('king', 'white', [4,4])
@@ -88,18 +88,6 @@ for (let i = 0; i < num; i++) {
   game.simulation_board.print();
   
 
-} */
+}
 
 
-
- 
-let game = new chess_game();
-game.Game_board.set_empty();
-game.Game_board.board[0][0] = new Piece('king', 'white', [0, 0]);
-game.Game_board.board[0][1] = new Piece('queen', 'black', [0, 1]);
-game.Game_board.board[0][5] = new Piece('queen', 'black', [0, 5]);
-console.log('init board --------------------')
-game.Game_board.print();
-
-console.log(game.Game_board.check_threat("white"));
-console.log("checkmate", game.checkmate("white"));  
